@@ -8,6 +8,23 @@
 
 const prompt = require("prompt-sync")();
 
+const ROWS = 3;
+const COLUMNS = 3;
+
+const SYMBOL_COUNT = {
+    "A": 2,
+    "B": 4,
+    "C": 6,
+    "D": 8
+}
+
+const SYMBOL_VALUES = {
+    "A": 5,
+    "B": 4,
+    "C": 3,
+    "D": 2
+}
+
 const deposit = () => {
     while (true) {
         const deposit_amount = prompt("Enter deposit amount: ");
@@ -34,5 +51,19 @@ const get_no_of_lines_to_bet = () => {
     }
 };
 
-const deposit_amount = deposit();
+const get_bet = (balance, lines) => {
+    while (true) {
+        const bet = prompt("Enter the total bet amount: ");
+        const number_bet = parseFloat(bet)
+
+        if (isNaN(number_bet) || number_bet <= 0 || number_bet > balance / lines) {
+            console.log("Invalid bet, try again.");
+        } else {
+            return number_bet;
+        }
+    }
+};
+
+let balance = deposit();
 const number_of_lines = get_no_of_lines_to_bet();
+const bet = get_bet(balance, number_of_lines);

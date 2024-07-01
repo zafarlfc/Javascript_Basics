@@ -18,3 +18,23 @@ console.log(typeof number_);
 console.log(typeof is_eligible);
 console.log(typeof not_defined);
 console.log(typeof selection);
+
+// Reference Types
+
+// 1. Objects
+
+let company = {
+    name: "SMC",
+    id: 1234
+};
+console.log(company);
+
+company.name = "Private";
+console.log(company.name);
+
+company["name"] = "Public";
+console.log(company.name);
+
+let select = "name";
+company[select] = "SMC";
+console.log(company.name);

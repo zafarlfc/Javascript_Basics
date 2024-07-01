@@ -38,3 +38,18 @@ console.log(company.name);
 let select = "name";
 company[select] = "SMC";
 console.log(company.name);
+
+
+// Arrays
+
+let cart = ["item1", "item2"];
+console.log(cart);
+console.log(cart[0]);
+
+cart[2] = "item3";
+console.log(cart);
+
+cart[3] = 4;
+console.log(cart);
+
+console.log(cart.length);

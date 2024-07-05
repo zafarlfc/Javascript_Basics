@@ -62,6 +62,7 @@ function greetings(name){
 }
 
 greetings("Hello " + "Someone")
+greetings("Hello " + "John")
 
 function counter(any_number){
     return any_number + 1;

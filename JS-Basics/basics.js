@@ -69,3 +69,4 @@ function counter(any_number){
 
 console.log(counter(5));
 console.log(counter(10));
+console.log(counter(100));
